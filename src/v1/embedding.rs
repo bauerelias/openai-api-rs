@@ -52,7 +52,8 @@ pub struct EmbeddingResponse {
     pub object: String,
     pub data: Vec<EmbeddingData>,
     pub model: String,
-    pub usage: Usage,
+    #[serde(default)]
+    pub usage: Option<Usage>,
     pub headers: Option<HashMap<String, String>>,
 }
 
