@@ -8,6 +8,7 @@ use crate::impl_builder_methods;
 pub struct EmbeddingData {
     pub object: String,
     pub embedding: Vec<f32>,
+    #[serde(default)]
     pub index: i32,
 }
 
